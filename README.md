@@ -1,7 +1,7 @@
 # elk-filebeat
 basic elk + filebeat setup on ubuntu
 
-#### [install elasticsearch](https://github.com/ankitaggarwal158/elk-filebeat)
+#### [install elasticsearch](https://github.com/ankitaggarwal158/elk-filebeat/blob/master/README.md#install-elasticsearch)
 ```
 wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.4.2-amd64.deb
 wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.4.2-amd64.deb.sha512
@@ -23,7 +23,7 @@ sudo systemctl stop elasticsearch.service
 curl -X GET "localhost:9200/?pretty"
 ```
 
-#### [install kibana](https://github.com/ankitaggarwal158/elk-filebeat)
+#### [install kibana](https://github.com/ankitaggarwal158/elk-filebeat/blob/master/README.md#install-kibana)
 ```
 wget https://artifacts.elastic.co/downloads/kibana/kibana-7.4.2-amd64.deb
 shasum -a 512 kibana-7.4.2-amd64.deb 
@@ -39,7 +39,7 @@ sudo /bin/systemctl enable kibana.service
 ```
 /etc/kibana/kibana.yml
 ```
-#### [install logstash](https://github.com/ankitaggarwal158/elk-filebeat)
+#### [install logstash](https://github.com/ankitaggarwal158/elk-filebeat/blob/master/README.md#install-logstash)
 ```
 wget https://artifacts.elastic.co/downloads/logstash/logstash-7.4.2-amd64.deb
 shasum -a 512 logstash-7.4.2-amd64.deb 
