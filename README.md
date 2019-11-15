@@ -48,3 +48,12 @@ sudo /bin/systemctl daemon-reload
 sudo /bin/systemctl enable logstash.service
 sudo systemctl start logstash.service
 ```
+
+#### [install filebeat](https://github.com/ankitaggarwal158/elk-filebeat/blob/master/README.md#install-filebeat)
+```
+curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.4.2-amd64.deb
+sudo dpkg -i filebeat-7.4.2-amd64.deb
+sudo /bin/systemctl daemon-reload
+sudo /bin/systemctl enable filebeat.service
+sudo systemctl start filebeat.service
+```
