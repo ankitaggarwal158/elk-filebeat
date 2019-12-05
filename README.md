@@ -1,59 +1,19 @@
-# elk-filebeat
-basic elk + filebeat setup on ubuntu
+### sudo apt-get update
+### sudo apt-get upgrade
+### sudo apt-get install default-jre
+#### java -version
+### wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
+### echo "deb https://artifacts.elastic.co/packages/6.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-6.x.list
+### sudo apt-get update
 
-#### [install elasticsearch](https://github.com/ankitaggarwal158/elk-filebeat/blob/master/README.md#install-elasticsearch)
-```
-wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.4.2-amd64.deb
-wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.4.2-amd64.deb.sha512
-shasum -a 512 -c elasticsearch-7.4.2-amd64.deb.sha512
-sudo dpkg -i elasticsearch-7.4.2-amd64.deb
-sudo /bin/systemctl daemon-reload
-sudo /bin/systemctl enable elasticsearch.service
-```
-###### To start:
-```
-sudo systemctl start elasticsearch.service
-```
-###### To stop:
-```
-sudo systemctl stop elasticsearch.service
-```
-###### To check if elasticsearch is running:
-```
-curl -X GET "localhost:9200/?pretty"
-```
+# install elasticsearch
+sudo apt-get install elasticsearch
 
-#### [install kibana](https://github.com/ankitaggarwal158/elk-filebeat/blob/master/README.md#install-kibana)
-```
-wget https://artifacts.elastic.co/downloads/kibana/kibana-7.4.2-amd64.deb
-shasum -a 512 kibana-7.4.2-amd64.deb 
-sudo dpkg -i kibana-7.4.2-amd64.deb
-sudo /bin/systemctl daemon-reload
-sudo /bin/systemctl enable kibana.service
-```
-###### To start:
-```sudo systemctl start kibana.service```
-###### To stop:
-```sudo systemctl stop kibana.service```
-###### config file:
-```
-/etc/kibana/kibana.yml
-```
-#### [install logstash](https://github.com/ankitaggarwal158/elk-filebeat/blob/master/README.md#install-logstash)
-```
-wget https://artifacts.elastic.co/downloads/logstash/logstash-7.4.2-amd64.deb
-shasum -a 512 logstash-7.4.2-amd64.deb 
-sudo dpkg -i logstash-7.4.2-amd64.deb
-sudo /bin/systemctl daemon-reload
-sudo /bin/systemctl enable logstash.service
-sudo systemctl start logstash.service
-```
+ # install logstash
+ sudo apt-get install logstash
 
-#### [install filebeat](https://github.com/ankitaggarwal158/elk-filebeat/blob/master/README.md#install-filebeat)
-```
-curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.4.2-amd64.deb
-sudo dpkg -i filebeat-7.4.2-amd64.deb
-sudo /bin/systemctl daemon-reload
-sudo /bin/systemctl enable filebeat.service
-sudo systemctl start filebeat.service
-```
+ # install kibana
+ sudo apt-get install logstash
+
+ # install filebeat
+ sudo apt-get install filebeat
